@@ -1,0 +1,19 @@
+{
+  "name": "crud-app",
+  "version": "1.0.0",
+  "description": "crud App with Node Js, Express js,Template engines hbs  And Mongoose ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "rohan patel",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "express": "^4.17.1",
+    "hbs": "^4.1.2",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.12.14",
+    "node-localstorage": "^2.2.1"
+  }
+}

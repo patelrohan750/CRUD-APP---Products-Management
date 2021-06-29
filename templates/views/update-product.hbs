@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Product</title>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    {{>headerLinks}}
+</head>
+
+<body>
+    {{>navbar}}
+    <div class="container">
+        <div class="box-nav d-flex justify-between">
+            <div class="filter">
+                <a href="/"><i class="fas fa-angle-double-left"></i> All Prdocuts</a>
+            </div>
+        </div>
+        <div class="form-title text-center">
+            <h2 class="text-dark">Update Prdouct</h2>
+        </div>
+        <div class="row mt-5">
+            {{!-- image --}}
+            <div class="col-md-6">
+                <img src="img/update.png" alt="nothing" class="img-fluid">
+            </div>
+            {{!-- form handling --}}
+            <div class="col-md-6">
+
+            <form action="/api/product/update/" method="POST">
+            <div class="add_prdouct">
+                 <input type="hidden"  name="id" value={{product._id}} >
+                <div class="mb-3">
+                    <label for="name" class="form-label">Product Name</label>
+                    <input type="text" class="form-control" name="prod_name" value={{product.prod_name}} placeholder="product name">
+                </div>
+                <div class="mb-3">
+                    <label for="description"  class="form-label">Product Description</label>
+                    <input type="text" class="form-control" name="prod_dec" value={{product.prod_dec}} placeholder="product decsription">
+                </div>
+                 <div class="mb-3">
+                    <label for="price"  class="form-label" >Product Price</label>
+                    <input type="number" class="form-control" name="prod_price" value={{product.prod_price}} placeholder="product price">
+                </div>
+               
+                <div class="mb-3">
+                    <label for="gender" class="form-label">Status</label>
+                    <div class="form-check">
+                        <input type="radio"  class="form-check-input" name="prod_status" value="Active" {{ternary product.prod_status "==" "Active"}}>
+                        <label for="radio1" class="form-check-label">Active</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="radio" class="form-check-input"  name="prod_status" value="Inactive" {{ternary product.prod_status "==" "Inactive"}}>
+                        <label for="radio2" class="form-check-label">Inactive</label>
+                        <p></p>
+                    </div>
+                </div>
+                  <div class="mb-3">
+                    <label for="description"  class="form-label">Product Url</label>
+                    <input type="text" class="form-control" name="prod_url" value={{product.prod_url}} placeholder="product url">
+                </div>
+
+                <div class="mb-3">
+                    <button type="submit" class="btn btn-primary" >Update</button>
+                </div>
+
+            </div>
+        </form>
+            </div>
+        </div>
+      
+       
+    </div>
+ <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+<script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.js"></script>
+  <script src="js/index.js">
+  
+</body>
+
+</html>

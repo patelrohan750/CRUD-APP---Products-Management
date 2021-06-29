@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Product</title>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    {{>headerLinks}}
+</head>
+
+<body>
+   
+   <div class="container-fluid">
+  <div class="row no-gutter">
+    <div class="d-none d-md-flex col-md-4 col-lg-6 bg-image"></div>
+    <div class="col-md-8 col-lg-6">
+      <div class="login d-flex align-items-center py-5">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-9 col-lg-8 mx-auto">
+              <h3 class="login-heading mb-4">Welcome back!</h3>
+              <form action"/login" method="POST" >
+                <div class="form-label-group">
+                  <input type="email" name="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+                  <label for="inputEmail">Email address</label>
+                </div>
+
+                <div class="form-label-group">
+                  <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>
+                  <label for="inputPassword">Password</label>
+                </div>
+     <div  class="form-text text-danger">{{errorshow}}</div>
+                
+                <button class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2" type="submit">Login</button>
+                
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    {{>footerLinks}}
+</body>
+
+</html>
